@@ -17,61 +17,61 @@ Usage.
 
 Add.
 
-  $ cd
-  D:\work\github\stakiran\cmdmarks
+    $ cd
+    D:\work\github\stakiran\cmdmarks
+    
+    $ cm
+     1: c:\windows
+     2: c:\program files
+     2 bookmarks.
 
-  $ cm
-   1: c:\windows
-   2: c:\program files
-   2 bookmarks.
+    $ cm add
+    Add "D:\work\github\stakiran\cmdmarks" as bookmark.
 
-  $ cm add
-  Add "D:\work\github\stakiran\cmdmarks" as bookmark.
-
-  $ cm
-   1: c:\windows
-   2: c:\program files
-   3: D:\work\github\stakiran\cmdmarks
-   3 bookmarks.
+    $ cm
+     1: c:\windows
+     2: c:\program files
+     3: D:\work\github\stakiran\cmdmarks
+     3 bookmarks.
 
 Go. (number matching)
 
-  $ cm 1
-  pushd c:\windows
+    $ cm 1
+    pushd c:\windows
 
-  $ cd
-  c:\Windows
+    $ cd
+    c:\Windows
 
 Go. (query matching)
 
-  $ cm sta
-  pushd D:\work\github\stakiran\cmdmarks
+    $ cm sta
+    pushd D:\work\github\stakiran\cmdmarks
 
-  $ cd
-  D:\work\github\stakiran\cmdmarks
+    $ cd
+    D:\work\github\stakiran\cmdmarks
 
 Edit and Check.
 
-  $ cm
-   1: c:\windows
-   2: c:\program files
-   3: D:\work\github\stakiran\cmdmarks
-   3 bookmarks.
+    $ cm
+     1: c:\windows
+     2: c:\program files
+     3: D:\work\github\stakiran\cmdmarks
+     3 bookmarks.
 
-  $ cm edit
+    $ cm edit
 
-  $ cm
-   1: c:\windows
-   2: c:\program files
-   3: c:\program files\invalidpath
-   4: D:\work\github\stakiran\cmdmarks
-   5: c:\invalidpath
-   5 bookmarks.
+    $ cm
+     1: c:\windows
+     2: c:\program files
+     3: c:\program files\invalidpath
+     4: D:\work\github\stakiran\cmdmarks
+     5: c:\invalidpath
+     5 bookmarks.
 
-  $ cm check
-   3: c:\program files\invalidpath
-   5: c:\invalidpath
-   2 invalid directories.
+    $ cm check
+     3: c:\program files\invalidpath
+     5: c:\invalidpath
+     2 invalid directories.
 
 ## Installation
 
