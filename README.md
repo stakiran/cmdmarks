@@ -76,7 +76,7 @@ Edit and Check.
 ## Installation
 
 1. git clone https://github.com/stakiran/cmdmarks
-2. Add cmdmarks directory to the PATH.
+2. Add cm.bat to the PATH environment variable.
 
 ## Where Cmdmarks are stored
 
