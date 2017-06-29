@@ -6,16 +6,18 @@ Directory bookmarks for Windows Command Prompt.
 
 Usage.
 
-```cmd
-$ dirb help
-[Usage]
-dirb          : List all bookmarks.
-dirb add      : Add the current directory as bookmark.
-dirb edit     : Open the datafile with your editor.
-dirb check    : Check pathes in the datafile and alert if an error exists.
-dirb (NUMBER) : Goes (pushd) to the directory matched the number.
-dirb (QUERY)  : Goes (pushd) to the directory matched the query.
 ```
+$ cm help
+[Usage]
+cm          : List all bookmarks.
+cm add      : Add the current directory as bookmark.
+cm edit     : Open the datafile with your editor.
+cm check    : Check pathes in the datafile and alert if an error exists.
+cm (NUMBER) : Goes (pushd) to the directory matched the number.
+cm (QUERY)  : Goes (pushd) to the directory matched the query.
+```
+
+List
 
 ## Installation
 
