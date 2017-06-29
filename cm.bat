@@ -6,6 +6,9 @@ set targetdir=invalid
 set myname=cmdmark
 set datafile=%~dp0%myname%_list.txt
 
+set indent_list= 
+set indent_indicator=    
+
 if "%1"=="help" (
 	echo [Usage]
 	echo %~n0          : List all bookmarks.
@@ -20,6 +23,7 @@ if "%1"=="help" (
 if exist %datafile% (
 	rem Do Nothing.
 ) else (
+	echo The datafile "%datafile%" do not exists, create firstly.
 	copy nul %datafile%
 )
 
@@ -32,10 +36,11 @@ if "%1"=="check" (
 			rem Do Nothing.
 		) else (
 			set /a error_cnt=!error_cnt!+1
-			echo  !cnt!: %%i
+			echo %indent_list%!cnt!: %%i
 		)
 	)
-	echo  !error_cnt! invalid directories.
+	echo.
+	echo %indent_indicator%!error_cnt! invalid directories.
 	exit /b
 )
 if "%1"=="edit" (
@@ -66,7 +71,7 @@ if %ret% neq 0 (
 			exit /b
 		)
 	)
-	echo Not found: %targetnum%
+	echo Not found: !targetnum!
 	exit /b
 )
 
@@ -91,7 +96,7 @@ echo Multiple matched... Please consider your query.
 set /a cnt=0
 for /F "usebackq tokens=*" %%i in (`type %datafile%`) do (
 	set /a cnt=!cnt!+1
-	echo  !cnt!: %%i | findstr /I %1
+	echo %indent_list%!cnt!: %%i | findstr /I %1
 )
 exit /b
 
@@ -110,9 +115,10 @@ exit /b
 set /a cnt=0
 for /F "usebackq tokens=*" %%i in (`type %datafile%`) do (
 	set /a cnt=!cnt!+1
-	echo  !cnt!: %%i
+	echo %indent_list%!cnt!: %%i
 )
-echo  !cnt! bookmarks.
+echo.
+echo %indent_indicator%!cnt! bookmarks.
 exit /b
 
 rem @retval 0 If it is not numeric.
